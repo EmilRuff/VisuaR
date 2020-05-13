@@ -1909,7 +1909,7 @@ Mean.Com.Sim=(1-(mean(M.dist)))*100
 cat('\nNote: Maximum, Mean and Minimal Community Similarity in % (as shown in the NMDS plots) refers to the comparison of any two samples using the bray-curtis distance matrix.' ,file=(file.path(PathToVisuaRAnalysis,paste(VisuaRProjectName,'_Analysis_log.txt',sep=''))),sep='',append=TRUE)
 
 M.mMDS=metaMDS(M.dist) # takes distances from n-dimensional M.dist (n=number of samples-1) and creates a 2-dimensional ordination. 
-if (SaveWholeworkspace=='N') {rm(M.dist)}
+
 saveRDS(M.mMDS,file.path(PathToVisuaRAnalysis,'Beta_Diversity',paste(VisuaRProjectName,"_distanceMatrix.rds",sep="")))
 cat("\nNote: In NMDS ordinations the distance between two samples represents the distance of their underlying communities.\nNMDS distances are relative measures and thus, do not need an axis.\nAxes in NMDS ordinations are only used when NMDS is combined (i.e. superimposed on the NMDS ordination) with another method.",file=(file.path(PathToVisuaRAnalysis,paste(VisuaRProjectName,'_Analysis_log.txt',sep=''))),sep="\t",append=TRUE)
 
@@ -2161,8 +2161,7 @@ if (SaveWholeworkspace=='N') {rm(M.grouped)}
 
 # #------- 5.4. Calculates and visualizes Cluster Dendrograms by samples -----------------------------------------------------------------------------------------------------------------
 # # Creates different cluster diagrams of all samples colored in the selected Grouping1
-M.sample.dist=vegdist(M, method="bray") 
-M.sample.clust <- hclust(M.sample.dist, method="average")
+M.sample.clust <- hclust(M.dist, method="average")
 
 pdf(file.path(PathToVisuaRAnalysis,'Beta_Diversity','Dendrograms',paste(VisuaRProjectName,"_ClusterDendrogram_samples.pdf",sep="")),height=5,width=5,useDingbats=F)
 M.sample.cd=plot(M.sample.clust,main=paste('Cluster Dendrogram\n',VisuaRProjectName),cex.main=0.8,xlab =NA,ylab = 'Distance' ,sub=NA,hang=-1)
@@ -2177,7 +2176,7 @@ pdf(file.path(PathToVisuaRAnalysis,'Beta_Diversity','Dendrograms',paste(VisuaRPr
 M.sample.phylo=plot(as.phylo(M.sample.clust),type='radial',no.margin = T,cex=0.6,tip.color = c(M.colvec))
 dev.off()
 
-if (SaveWholeworkspace=='N') {rm(M.sample.dist,M.sample.clust,M.sample.phylo)}
+if (SaveWholeworkspace=='N') {rm(M.dist,M.sample.clust,M.sample.phylo)}
 
 # #------- 5.5. Create UpsetR turnover plot ---------------------------------------------------------------------------------------------------------------------------------------------
 # # UpsetR is a tool to visualize overlaps in datasets, it is analogous to Venn diagrams, yet can plot more dimensions
