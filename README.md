@@ -3,7 +3,7 @@ R-based workflow for the analysis and visualization of dada2-processed sequencin
 
 VisuaR's main goal is to provide a set of analyses and visualizations that are often used in the analyses of amplicon sequencing data. The VisuaR workflow is based on commands from other R packages (e.g. vegan, stringr, plyr, ggplot2), as well as on custom-build scripts. It takes dada2 (https://github.com/benjjneb/dada2) files as input and generates (near-)publication ready figures as output. In addition to NMDS ordinations, cluster dendrograms and UpSet diagrams the workflow features custom scripts that calculate the percentage of singletons or shared ASVs, and visualize diversity indices, or the relative sequence abundance of clades at specific taxonomic levels. All analyses and visualizations can be performed using a contextual data matrix to create figures colored by groupings (e.g. environmental parameters).
 
-# Input Files
+## Input Files
 1.  A sequence table without chimeras as produced by dada2 after using dada2::makeSequenceTable and dada2:: removeBimeraDenovo (Samples by     ASVs)
 2.  A taxonomy file as produced by dada2:: assignTaxonomy or dada2::addSpecies (ASVs by Taxonomy)
 3.	Optional: A contextual data file (.txt)
