@@ -10,11 +10,11 @@
 
 VisuaRProjectName=''              # Give your analysis a (short) name
 
-PathToVisuarOutput=file.path('')  # At this location the folder 'VisuaR' will be created containing subfolders with your analyses (named as provided in VisuaRProjectname)
+PathToVisuarOutput=file.path('')  # At this location the folder 'VisuaR' will be created containing subfolders with your analyses (named as provided in VisuaRProjectname), e.g. 'C:/Users/User1/Desktop'
 
 # # Provide your dada2 output
-PathToSeqtabNochim=file.path('')  # provide the location and name of your seqtab_nochim.rds
-PathToTaxonomy=file.path('')      # provide the location and name of your taxonomy.rds
+PathToSeqtabNochim=file.path('')  # provide the location and name of your seqtab_nochim.rds, e.g. C:/Users/User1/Desktop/FancyProject_seqtab_nochim.rds
+PathToTaxonomy=file.path('')      # provide the location and name of your taxonomy.rds, e.g. C:/Users/User1/Desktop/FancyProject_taxa_species.rds
 
 # # Analysis specifications
 KingdomOfInterest=''              # Which kingdom are you interested in? choose Bacteria/Archaea/Eukaryota
@@ -22,11 +22,11 @@ MinimumAllowedReadCount=2000      # MinimumAllowedReadcount depends on the overa
 
 # #=== 1.2. Optional INPUT - Sample selection =============================================================================================================================================
 
-CladeOfInterest=''      # Enter one or several clade(s) or keywords as found in your taxa.rds file, e.g. 'Desulfo|Meth'. Only keeps ASVs belonging to lineages containing the term 'Desulfo' and/or 'Meth', i.e. 'Methylococcus', 'Methylotenera'...
-ExcludeClade=''         # Enter one or several clade(s) or keywords as found in your taxa.rds file. e.g. 'Escherichia|Salmonella'. Excludes ASVs belonging to lineages containing the term 'Escherichia' and/or 'Salmonella', i.e. Escherichia coli.
+CladeOfInterest=''                # Enter one or several clade(s) or keywords as found in your taxa.rds file, e.g. 'Desulfo|Meth'. Only keeps ASVs belonging to lineages containing the term 'Desulfo' and/or 'Meth', i.e. 'Methylococcus', 'Methylotenera'...
+ExcludeClade=''                   # Enter one or several clade(s) or keywords as found in your taxa.rds file. e.g. 'Escherichia|Salmonella'. Excludes ASVs belonging to lineages containing the term 'Escherichia' and/or 'Salmonella', i.e. Escherichia coli.
 
-KeepSamplesbyName=''    # Enter names of samples that you want to keep. Leave blank to keep all samples. For an exact match use e.g. '^SampleName1$|^SampleName2$'. The use of general terms is possible too, e.g. 'control|blank|enrichment|cont|cntrl|enr|extrctrl|Control|Blank|Enrichment|Cont|Cntrl|Enr|Extrctrl'.
-excludeSamplesbyName='' # Enter names of samples that you want to exclude. Leave blank to exclude no samples.
+KeepSamplesbyName=''              # Enter names of samples that you want to keep. Leave blank to keep all samples. For an exact match use e.g. '^SampleName1$|^SampleName2$'. The use of general terms is possible too, e.g. 'control|blank|enrichment|cont|cntrl|enr|extrctrl|Control|Blank|Enrichment|Cont|Cntrl|Enr|Extrctrl'.
+excludeSamplesbyName=''           # Enter names of samples that you want to exclude. Leave blank to exclude no samples.
 
 MinimumAllowedReadCount.Analysis=2000 # This field can be set to any number including 0 (zero) depending on which samples (based on read counts) should be included in the analysis. This happens after all ASVs and samples have been excluded as set in KeepSamplesbyName, excludeSamplesbyName, CladeOfInterest, ExcludeClade.
 
@@ -44,7 +44,7 @@ Metadata='N' # Do you have contextual data? If not write 'N' , if yes write 'Y' 
 # # do not start row or column names with a number
 # # use a .txt file
 
-Metadatafilepath=file.path('')  # provide the file path to your contextual data. i.e. 'C:/Users/Contextdata.txt' 
+Metadatafilepath=file.path('')  # provide the file path to your contextual data. e.g. 'C:/Users/User1/FancyProject_metadata.txt' 
 Grouping1=''
 Grouping2=''                    # The samples within Grouping1 will be sorted using this continuous grouping parameter (e.g. concentration, depth profile) for visualization
 VariableToExclude=''            # Enter a contextual data variable to exclude. E.g. '4C'
