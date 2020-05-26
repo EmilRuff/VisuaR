@@ -13,3 +13,34 @@ VisuaR's main goal is to provide a set of analyses and visualizations that are o
         b.	Other columns containing your contextual data. 
         c.	Replace missing values by NA (no empty cells!)
         d.	Avoid spaces and special symbols, replace them by underscores if necessary
+
+## Output Files
+1. Alpha Diversity
+        • Composition Plots on all taxonomic levels (Bubble and Box)
+        • Plots of Diversity Indices (Box and Violin)
+        • Species Accumulation Curves
+        • Rarefaction Curve 
+        • Composition Tables on all taxonomic levels
+        • Relative abundance, abundance, presence absence
+        • Diversity Indices table
+        • ASV by Sample table with abundances
+        • ASV by sample table with presences/absences
+        • ASV by Sample table with relative abundances
+        • Reads and ASVs per sample table
+        • Reads per ASV table
+2. Beta Diversity
+        • NMDS plots
+        • Anosim plot
+        • UpsetR plot
+        • VennDiagram
+        • Dendrograms (not optimized)
+        • .txt files with
+        • Percent shared ASVs between groups
+        • Shared ASVs between groups
+        • Total ASVs between groups
+        • Unique ASVs between groups
+        • Unique ASVs per grouping
+3. Analysis Log
+4. Session Info (R version and loaded packages)
+5. R workspace
+6. ASV summary (a list of the ASV identifiers, the assigned numbers in VisuaR and the respective taxonomy)
