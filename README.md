@@ -1,4 +1,4 @@
-![VisuaR Logo](https://user-images.githubusercontent.com/62703732/82836047-4f9a4180-9eb5-11ea-987d-b67a5b56241e.png)
+![VisuaR Logo](https://user-images.githubusercontent.com/62703732/82889437-41dacf80-9f3a-11ea-8671-8296d87e47d2.png)
 
 # 
 R-based workflow for the analysis and visualization of dada2-processed sequencing data
