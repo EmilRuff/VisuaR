@@ -15,7 +15,7 @@ VisuaR's main goal is to provide a set of analyses and visualizations that are o
         d.	Avoid spaces and special symbols, replace them by underscores if necessary
 
 ## Output Files
-1. Alpha Diversity
+1. Alpha Diversity:
         • Composition Plots on all taxonomic levels (Bubble and Box)
         • Plots of Diversity Indices (Box and Violin)
         • Species Accumulation Curves
@@ -28,7 +28,7 @@ VisuaR's main goal is to provide a set of analyses and visualizations that are o
         • ASV by Sample table with relative abundances
         • Reads and ASVs per sample table
         • Reads per ASV table
-2. Beta Diversity
+2. Beta Diversity:
         • NMDS plots
         • Anosim plot
         • UpsetR plot
