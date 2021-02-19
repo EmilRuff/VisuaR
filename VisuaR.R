@@ -1091,7 +1091,7 @@ if (ncol.taxo.noNA==7) {
   
   # # Takes the first 'NumberOfTOPClades.box' rows; sums other rows with rare taxa
   if(NRS>NumberOfTOPClades.box) {
-    M.seq.tax.subset.species.sums.ord.box=rbind(M.seq.tax.subset.species.sums.ord[c(1:NumberOfTOPClades.box),],colSums(M.seq.tax.subset.species.sums.ord[c((NumberOfTOPClades.box+1):NRG),])); 
+    M.seq.tax.subset.species.sums.ord.box=rbind(M.seq.tax.subset.species.sums.ord[c(1:NumberOfTOPClades.box),],colSums(M.seq.tax.subset.species.sums.ord[c((NumberOfTOPClades.box+1):NRS),])); 
     rownames(M.seq.tax.subset.species.sums.ord.box) [(NumberOfTOPClades.box+1)]="Other" #take first 20 rows; sum other rows with rare taxa; call new row "Other"
   } else {
     M.seq.tax.subset.species.sums.ord.box=M.seq.tax.subset.species.sums.ord
@@ -1101,7 +1101,7 @@ if (ncol.taxo.noNA==7) {
   
   # # Takes the first 'NumberOfTOPClades' rows; sums other rows with rare taxa
   if(NRS>NumberOfTOPClades) {
-    M.seq.tax.subset.species.sums.ord=rbind(M.seq.tax.subset.species.sums.ord[c(1:NumberOfTOPClades),],colSums(M.seq.tax.subset.species.sums.ord[c((NumberOfTOPClades+1):NRG),])); 
+    M.seq.tax.subset.species.sums.ord=rbind(M.seq.tax.subset.species.sums.ord[c(1:NumberOfTOPClades),],colSums(M.seq.tax.subset.species.sums.ord[c((NumberOfTOPClades+1):NRS),])); 
     rownames(M.seq.tax.subset.species.sums.ord) [(NumberOfTOPClades+1)]="Other" #take first 20 rows; sum other rows with rare taxa; call new row "Other"
   }
   
